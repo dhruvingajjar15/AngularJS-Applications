@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<div ng-app="myApp">
+		<div ng-controller="MainCtrl">
+			{{message}}
+			<div>{{error}}</div>
+
+			{{countdown}}
+			<form name="searchUser" ng-submit="search(username)">
+				<input type="search" required placeholder="Username to find" ng-model="username" />
+				<input type="submit" value="Search" />
+			</form>
+			<div ng-include="'userdetails.html'" ng-show="user"></div>
+		</div>
+	</div>
+</body>
+</html>
